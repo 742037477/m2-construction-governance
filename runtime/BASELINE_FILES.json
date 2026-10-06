@@ -1,0 +1,218 @@
+{
+  "files": {
+    "M2-Construction-Portable-20261004/ACTIVE_ACCEPTANCE.json": {
+      "bytes": 739,
+      "sha256": "1aa0133f521471d0fe74bb33e1639f3aed7388236be3f06cb8ead339c63e1fe1"
+    },
+    "M2-Construction-Portable-20261004/BASELINE.json": {
+      "bytes": 6382,
+      "sha256": "d2ffcd6668410156a9c6bf88b47882459a2f05222029cf16173713dd7b3d60dd"
+    },
+    "M2-Construction-Portable-20261004/CHANGELOG_PORTABLE.md": {
+      "bytes": 3559,
+      "sha256": "17d149d83add74688e912c5d7f2cace804fd3e1b710df47a172dcadfdb1b731c"
+    },
+    "M2-Construction-Portable-20261004/CORE_CAPTURE.json": {
+      "bytes": 5683,
+      "sha256": "2f28a427c699da5fff2353f09be635b71970a313cd48b0fd60b377ef19262ad7"
+    },
+    "M2-Construction-Portable-20261004/DELIVERY_MEMBERS.json": {
+      "bytes": 9363,
+      "sha256": "f00ffb2f02dc858b89f5a8d1a1a80bb7ec67fefb9919a86d19c5f1bc4d787cd2"
+    },
+    "M2-Construction-Portable-20261004/DELIVERY_STATUS.md": {
+      "bytes": 1162,
+      "sha256": "bcd5b5eae7ef01f8468b3300eaf8da603d14c73ea87eb2ff1d0e9f5729138c6f"
+    },
+    "M2-Construction-Portable-20261004/PACKAGE_MANIFEST.json": {
+      "bytes": 8311,
+      "sha256": "eb41dccd1c913d94fe379ca67394727c37a9030852b7b9a74de7ae2307cfc0d4"
+    },
+    "M2-Construction-Portable-20261004/PORTABLE_VALIDATION.json": {
+      "bytes": 3266,
+      "sha256": "87763bef000f6e9348bb8fcb531722087363a1090bd8e0a55cc878e5538cd1fb"
+    },
+    "M2-Construction-Portable-20261004/README.md": {
+      "bytes": 7956,
+      "sha256": "9dfb2ccf3a41991e942da4f599f83bd1d7c9a0f31ee8a97e23c8669bd50cc93d"
+    },
+    "M2-Construction-Portable-20261004/SOURCE_BASELINE.json": {
+      "bytes": 11831,
+      "sha256": "a0746310a9948ead3a5a292532068a0affc5ebfe52c20ae2c331b5b078d75de6"
+    },
+    "M2-Construction-Portable-20261004/core/docs/PROVENANCE.md": {
+      "bytes": 2295,
+      "sha256": "626a5e95909802dd1b8f0b6aa81bf682d421c0ae9f1004e36fd616bc223fcf38"
+    },
+    "M2-Construction-Portable-20261004/core/docs/USAGE.md": {
+      "bytes": 27849,
+      "sha256": "9c6dca2ff790efd6d1229b5a2c60e7b1988c84b37639c26cffcf4f87b1b9ab3e"
+    },
+    "M2-Construction-Portable-20261004/core/pyproject.toml": {
+      "bytes": 283,
+      "sha256": "3d60363cfb03d83b2b2b684ceae80a3c4a4a75cf99c199e22395ef42d5acd977"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/__init__.py": {
+      "bytes": 57,
+      "sha256": "b73f47dc0f72982172d2cd5cbf3df41dbee66883687afd0a0e46ffb0d796ed16"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/adapters.py": {
+      "bytes": 15359,
+      "sha256": "815af3b2839ddf6b4945f311f5e76d72ba36c2a82b7e9d31917f1bf7d1dcd6e4"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/adjudication.py": {
+      "bytes": 12806,
+      "sha256": "b4db1a30540bb9c43ebab19e2798719e2650e52287c685ec20e25a673d3f4654"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/artifacts.py": {
+      "bytes": 14594,
+      "sha256": "2f4e97e2ad5913a0f4775b56e7176c7d89a16095a4727dd3694c042fff03e64d"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/cli.py": {
+      "bytes": 20733,
+      "sha256": "78c97c18ef9b58a6d16f3ca42756eaee6805c64a32ceb60ef63acc55a8d310a0"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/context.py": {
+      "bytes": 27470,
+      "sha256": "c96b685b3eaec8da9521385b05080afc24f113ad5a1e00340b49a3dff915ec6e"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/contracts.py": {
+      "bytes": 2156,
+      "sha256": "dfb1a6369abd4467949aebf3c8145908ff42836da3a06d9482257d2fa513171f"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/controller.py": {
+      "bytes": 58469,
+      "sha256": "f851d9fe9077087a4bfecbc292e1f8c0b4a2143ae9f83986dcfde6aac7ea04f5"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/evidence_projection.py": {
+      "bytes": 49931,
+      "sha256": "3e9b9d58519dc1f7778555afeec868b9898ca3b083436aea1b3a32654a801fdb"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/internal_return.py": {
+      "bytes": 19567,
+      "sha256": "77fdc4c4d58cad8b60792b50aebc2f3506f54584523fbac0271046e49e5b92df"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/ledger.py": {
+      "bytes": 4952,
+      "sha256": "dc1fdb8a3da6e7c2795b6eb2c7205ca120a7fa6911dbbeb64734b429e6d0fdc8"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/memory.py": {
+      "bytes": 19443,
+      "sha256": "c4b0f91db1f5f6cbee2f87dec7238c8621964a1bcd0ed2dfa91afab630db1dd0"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/orchestration.py": {
+      "bytes": 33201,
+      "sha256": "843b9c7cda9306cf06dc21476e8eb5d907aa20248bb51dff5398b7709b238137"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/pre_release.py": {
+      "bytes": 39095,
+      "sha256": "2ac2a624ddb52609f3bf5c722faeaa838716f404b4581acfc5ba6a1b5f2de7b7"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/release_effect.py": {
+      "bytes": 35125,
+      "sha256": "281975d0751e7e7516bb2b0eec5ea41aa2151b9fd1142d5d2efb726d7d4338be"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/review.py": {
+      "bytes": 6986,
+      "sha256": "3de38ba15970979cd2b3d9516bcbba1810965f45ad6069d7478d81e15eba164c"
+    },
+    "M2-Construction-Portable-20261004/core/src/m2_construction/trust.py": {
+      "bytes": 2183,
+      "sha256": "56538a0d330c4a89472479f39d46211c300ea01058cb7efe7ff820e63f64af76"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_adjudication.py": {
+      "bytes": 28996,
+      "sha256": "cf7164200ad766ef37b83eb281a455202146eb9a4e67f28fa8043bf2621993dd"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_cli.py": {
+      "bytes": 39073,
+      "sha256": "da251eb52afeaaa3a47e96e48a6af3f98a627727374a002202504276ee7195c5"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_context.py": {
+      "bytes": 35147,
+      "sha256": "2a5885bbc8eae81b928e2d9533233524e9b0df6da14e684495d51df5201fd915"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_evidence_projection.py": {
+      "bytes": 51401,
+      "sha256": "560d282ecb1679c30d43a2d122e175510216cfda099ff017726019b2b44f1467"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_execution.py": {
+      "bytes": 26078,
+      "sha256": "a2ff1147bc1ed05c31bfbd9ae35e33db262a49140fdb2a800066112577c994a7"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_internal_return.py": {
+      "bytes": 9207,
+      "sha256": "5757a3a86af4a6f0999dd73b88a04d2fe40c9f39ab773a0238828fb5294df3f6"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_memory.py": {
+      "bytes": 10065,
+      "sha256": "97f4b7734df9e0f6744f44b8e69e612094f4f85bfc22b8c08561f00791997886"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_orchestration.py": {
+      "bytes": 34586,
+      "sha256": "de4c044b65889634639bbfab2794cceadd126898c1300c51e3b651bcdfd30831"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_pre_release.py": {
+      "bytes": 19763,
+      "sha256": "b69aa4132e648c185e5ebf50aca96a12868d4764b0b8a7bc89c16255c1641a2a"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_release_effect.py": {
+      "bytes": 10722,
+      "sha256": "e3cf7347e52e225f2e494d12c3aabed00ccb3e5f3a8a1fdcb0ab24907e0b1942"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_return.py": {
+      "bytes": 18144,
+      "sha256": "7337d26d4e3229e27bdd20a0b6beaa48726af894c3cce6a94b63cd2e30ad1ef9"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_review.py": {
+      "bytes": 4897,
+      "sha256": "df815c74081360b14f311f4d82337924f2b3cc50f4b72c263b9fbe9b353a29c8"
+    },
+    "M2-Construction-Portable-20261004/core/tests/test_validation.py": {
+      "bytes": 18912,
+      "sha256": "355693b75ec1534e4d4b2a08c8401c636062aa053d6d5f3d0ebf1b1046ca5fb4"
+    },
+    "M2-Construction-Portable-20261004/docs/FAILURE_EXPERIENCE.md": {
+      "bytes": 7355,
+      "sha256": "9244fa9002ea38b7ec2b6749d4edd72f0f4548ea57ba62169cca047304cd8a11"
+    },
+    "M2-Construction-Portable-20261004/requirements-dev.txt": {
+      "bytes": 30,
+      "sha256": "7617ff3f3e6410ee294836978ee6bee967e44fbec3e80df1da0862b847088b53"
+    },
+    "M2-Construction-Portable-20261004/requirements.txt": {
+      "bytes": 75,
+      "sha256": "ba5df35bfdc1a52afa841e3cd848462fd9a1fc4d256298c2c4a256ebc33c959b"
+    },
+    "M2-Construction-Portable-20261004/samples/README.md": {
+      "bytes": 1434,
+      "sha256": "6245c9eaa6f0b483dbac78d7b1577119babfa0f7ba70256e632e08a42ec6a5ed"
+    },
+    "M2-Construction-Portable-20261004/src/m2_construction/failure_experience.py": {
+      "bytes": 36848,
+      "sha256": "ed9b48166f56b6db714c60d862c5f6d453f0ebc84676ccf93c5e425ba16428e6"
+    },
+    "M2-Construction-Portable-20261004/tests/test_failure_experience.py": {
+      "bytes": 63706,
+      "sha256": "44b3a440e4c3cc375e79e48ac6e91e6f5dc47098f7cc9d66cc5bc135774d85f3"
+    },
+    "M2-Construction-Portable-20261004/tools/delivery_tools.py": {
+      "bytes": 3854,
+      "sha256": "293c8d6a41004564e770847e73375a8e5700d650feca76a6c80b578ae7abeb7e"
+    },
+    "M2-Construction-Portable-20261004/tools/native_b_runtime.py": {
+      "bytes": 18873,
+      "sha256": "1faf37ad8b3de86c6be90ddb577ad4c6ff74684a8db625f1df33884ff34501a7"
+    },
+    "M2-Construction-Portable-20261004/tools/run_failure_sample.py": {
+      "bytes": 3438,
+      "sha256": "3de66fe2e66ea419fa3deaf894ef76d2b9095cda554eb7952a17a1b79f2e4eb3"
+    },
+    "M2-Construction-Portable-20261004/说明书.html": {
+      "bytes": 10915,
+      "sha256": "2ca24ad86e6afa0551a4a5681e0e812770859f5c84fcc877bfe015dd2bd7fe16"
+    }
+  },
+  "parent_zip_sha256": "6820549b83ac244ff544f42b5fd08c8abe954ef1bed27ec89b3163558df8dfb8",
+  "schema": "M2_EMBEDDED_BASELINE_1"
+}

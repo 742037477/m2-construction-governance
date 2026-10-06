@@ -1,0 +1,121 @@
+{
+  "schema": "M2_PORTABLE_START_VALIDATION_1",
+  "version": "CK-PORTABLE-START-20261006-01",
+  "status": "SCOPED_CHECKS_AND_NONAUTHOR_REVIEW_COMPLETE",
+  "human_acceptance": "PENDING",
+  "scope": "New portable startup, project-reference configuration and original entry forwarding only",
+  "environment": {
+    "os": "Windows",
+    "python": "3.13.11",
+    "cryptography": "46.0.3"
+  },
+  "baseline": {
+    "parent_zip_sha256": "6820549b83ac244ff544f42b5fd08c8abe954ef1bed27ec89b3163558df8dfb8",
+    "parent_members_compared": 53,
+    "different_members": [],
+    "original_zip_sha256": "e34f84ecca424115c1bcdb2df37e63e0c0c2d029c52662d1cb8b594e8a0b194f",
+    "original_core_modules_compared": 18,
+    "different_core_modules": [],
+    "comparison": "EXACT_BYTES",
+    "test_execution": false
+  },
+  "entry_checks": {
+    "unique_checks_with_passing_evidence": 9,
+    "evidence_policy": "R2 passed 8 of 9; R3 reran the fixed missing-config case and project restart/hash case. Original failures retained.",
+    "coverage": [
+      "help and workflow",
+      "relocated Chinese/spaced package",
+      "modified core refused before import",
+      "original kernel and tool help",
+      "CONFIG_1 and CONFIG_3 read-only readiness",
+      "real project config/restart/source mutation",
+      "structured missing-config refusal",
+      "original failure experience flow with retained FAILED exit 7 and fresh-output refusal"
+    ]
+  },
+  "context_checks": {
+    "unique_passed": 11,
+    "skipped": 1,
+    "skipped_reason": "Windows denied test symlink creation; hardlink rejection passed.",
+    "evidence_policy": "R2 passed 10 of 12, failed duplicate-key error classification and skipped symlink creation. R3 fixed classification and reran it plus rooted-path/restart/relocation cases."
+  },
+  "independent_reviews": {
+    "CONTEXT_REVIEW.json": {
+      "decision": "GO_WITHIN_REVIEW_SCOPE",
+      "sha256": "1cff386fe5b94d5d4d901030572f0eaed384bbfe025bc534d74fcabb629a952b",
+      "scope": "Project-context advisory wrapper, its tests and immediate CLI error boundary only."
+    },
+    "ENTRY_REVIEW.json": {
+      "decision": "GO_SCOPED_ENTRY",
+      "sha256": "1269584631df5f87981b89c563a917cc4f624d751bdfe0f43a188361407fb3da",
+      "scope": "m2.py doctor/start/readiness/kernel/tool/sample and immediate baseline call sites; no re-audit of the frozen governance kernel implementation."
+    },
+    "DOCS_REVIEW.json": {
+      "decision": "GO_SCOPED_DOCUMENTATION",
+      "sha256": "4f868a82ae01dbd6db750b43417f74002966c119df8b1a2b26bbdc5608930d21",
+      "scope": {
+        "authored_documents": [
+          "README.md",
+          "START_HERE.md",
+          "AGENTS.md",
+          "docs/WORKFLOW.md",
+          "docs/TROUBLESHOOTING.md",
+          "docs/STATUS_MEANING.md",
+          "docs/REVIEW_CHECKLIST.md",
+          "docs/PROJECT_CONTEXT.md",
+          "methods/README.md"
+        ],
+        "api_references": [
+          "m2.py",
+          "portable/project_context.py"
+        ],
+        "supporting_read_only_references": [
+          "baseline/M2-Construction-Portable-20261004/core/docs/USAGE.md",
+          "baseline/M2-Construction-Portable-20261004/core/src/m2_construction/cli.py",
+          "baseline/M2-Construction-Portable-20261004/tools/native_b_runtime.py"
+        ],
+        "methods_files": "本轮检查两个原规则文件存在、可由 methods/README.md 链接访问，并记录其哈希；未把原规则复述为本包验收结论。",
+        "checks": [
+          "八类项目来源与实际 ROLES、字段及缺失/不适用语义一致。",
+          "Windows 与 POSIX 示例按对应 shell 静态复核，修复后的第三步给出独立 POSIX workflow/readiness 命令。",
+          "明确保留当前授权、原失败、UNKNOWN、原操作 ID、连续账本与累计预算。",
+          "TEST 要求对应实际候选字节，另一份工程通过不能覆盖当前候选。",
+          "CONFIG_3 只表示入口 pin 配置齐备，不表示独审、CEO 接受或发布完成。",
+          "启动、样例、TEST、旧基线人工 PASS 不提升为新包装层或业务项目 PASS。",
+          "程序门控不替代宿主可信隔离、系统权限或全局工具拦截。"
+        ]
+      }
+    }
+  },
+  "internal_evidence_sha256": {
+    "entry-red.log": "2cf30e3945655b2d99cfea536c3b3f4688756bb412dc4dd4b98d773de5599c2e",
+    "entry-r1.log": "870accc5eafd17c184017ecd7a022f85e1116f2d61c20caa11966f120a8c0218",
+    "entry-r2.log": "2f08c1efc06b398d70a01e9d2bd391ac17d791cf9009332f0f652a67c1c9731b",
+    "entry-r3-targeted.log": "1884016bb0c992fd94e71d05bece2455c24e596ab08066f9b6155d7f1efa348e",
+    "context-r2.log": "4baefdb41870b7025ee97d08370bf7e0665a79c6538878adaeaf70bde93b5cda",
+    "context-r3-targeted.log": "7a96467dda9954ea54488403d884b102c8d0681eecfe6f1074bf4aa80c76467a",
+    "BASELINE_FINAL_COMPARE.json": "0be5320f8e70a74e90d16c89e8177c6eea8ce69f01bf5508691a6907380174cd"
+  },
+  "limitations": [
+    "Windows tested; macOS and Linux not executed.",
+    "No customer repository, model provider, autonomous supervisor or external deployment tested.",
+    "Package checks and guidance do not issue runtime grants or prove full project acceptance.",
+    "The wrapper is not an OS sandbox or a global native-tool interceptor.",
+    "Explicit source selection and path/PEM checks are not a complete secret-redaction service.",
+    "Original baseline human PASS does not transfer to this wrapper or another project."
+  ],
+  "execution_authority": false,
+  "original_failures_preserved": true,
+  "documentation_revision": "R2_ARCHITECTURE_CAUSALITY",
+  "r2_change": {
+    "scope": "Documentation only; no new runtime tests",
+    "parent_r1_zip_sha256": "b0376f7ca7ccebee94ddcbd98e60dca427737fb8368579de929bc01782f910d5",
+    "runtime_and_embedded_baseline_unchanged": true,
+    "architecture_document_sha256": "42505839a7fb3fed57831eb83381cce07847013dedd00d367ab0eb5872c0f374",
+    "independent_documentation_review": {
+      "decision": "GO_SCOPED_DOCUMENTATION_WITH_MINOR_CLARIFICATION",
+      "sha256": "52c9bd031830d75df4eb47f86137e538562e8038df240641bda884f871b5204e"
+    },
+    "existing_test_evidence": "R1 results reused only for identical runtime bytes; no new project or platform acceptance"
+  }
+}

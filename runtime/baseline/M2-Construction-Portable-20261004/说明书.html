@@ -1,0 +1,138 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>construction 使用说明</title><style>
+body{margin:0;background:#f3f5f8;color:#203047;font:16px/1.8 'Microsoft YaHei','Segoe UI',sans-serif}
+main{max-width:980px;margin:32px auto;padding:40px 48px;background:white;border-radius:12px}
+h1,h2,h3{line-height:1.4;color:#123758}h1{font-size:30px}h2{margin-top:32px;border-bottom:1px solid #dce3ec;padding-bottom:8px}
+a{color:#145da0;overflow-wrap:anywhere}p,li,td{overflow-wrap:anywhere}code{font:14px/1.6 Consolas,monospace;background:#eef2f7;padding:2px 4px}
+pre{background:#eef2f7;padding:16px;overflow:auto;border-left:4px solid #4584b4}pre code{padding:0}
+table{width:100%;border-collapse:collapse;margin:16px 0}td,th{padding:10px 12px;border:1px solid #d6dee8;text-align:left;vertical-align:top}th{background:#edf3fa}
+blockquote{margin:16px 0;padding:8px 16px;background:#fff5de;border-left:4px solid #dba340}
+footer{margin-top:36px;color:#66788b;font-size:13px}@media(max-width:700px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:24px}}
+@media print{body{background:white}main{margin:0;padding:0;max-width:none}pre{white-space:pre-wrap}h2,h3{break-after:avoid}tr{break-inside:avoid}}
+</style></head><body><main><h1>施工版便携清洁包</h1>
+<p>这是 <code>CK-FINAL-20260928-01</code> 的源码便携派生版 <code>CK-FINAL-20260928-01-portable-20261004</code>。它提供 Python 治理核心、受控工具桥和失败经验复用样例。无需原机器目录、C06、模型服务、数据库、账号或旧凭据。</p>
+<p><strong>原版 2026-09-28 人工 PASS 不转移到本次派生包。</strong> 本包未添加开源许可证；原有来源归属保留。来源 ZIP 和原哈希在 <code>SOURCE_BASELINE.json</code>，逐文件改动在 <code>CHANGELOG_PORTABLE.md</code>。验收范围见 <code>PORTABLE_VALIDATION.json</code>。</p>
+<h2>1. 环境和安装（Windows PowerShell）</h2>
+<p>需要 Python 3.11 或以上以及 <code>cryptography&gt;=41</code>。本次实际使用 Python 3.13.11 / cryptography 46.0.3；其它系统或版本未在本轮验证。示例本身不需要 pytest；开发测试需要 requirements-dev.txt 中的 pytest。包不带 Python、二进制依赖或离线 wheel，首次安装依赖通常需要网络。</p>
+<p>解压到任意可写文件夹（允许空格），进入包含此 README 的包根，再运行：</p>
+<pre><code class="language-powershell">python --version
+$packageRoot = (Get-Location).Path
+$venvRoot = Join-Path (Split-Path $packageRoot -Parent) 'construction-env'
+python -m venv &quot;$venvRoot&quot;
+$python = Join-Path $venvRoot 'Scripts/python.exe'
+&amp; $python -m pip install -r ./requirements.txt
+&amp; $python -c &quot;import sys, cryptography; print(sys.version); print(cryptography.__version__)&quot;
+</code></pre>
+<p>若系统只有 <code>py -3</code>，第一、四行的 <code>python</code> 改为 <code>py -3</code>。虚拟环境放在包外；不需要激活它，不修改全局 Codex 或 Python 设置。已装好兼容依赖时可以直接使用现有解释器并把 <code>$python</code> 设为 <code>(Get-Command python).Source</code>。不要在 <code>core/</code> 内创建虚拟环境、缓存或额外文件，核心完整目录有严格的 33 成员检查。</p>
+<h2>2. 运行一个独立示例</h2>
+<p>仍在包根运行，使用上一节的 <code>$python</code>：</p>
+<pre><code class="language-powershell">$sampleOut = Join-Path (Split-Path (Get-Location).Path -Parent) ('construction-sample-' + [guid]::NewGuid().ToString('N'))
+&amp; $python -B ./tools/run_failure_sample.py --output &quot;$sampleOut&quot;
+Get-Content -Raw (Join-Path $sampleOut 'flow01/flow-result.json')
+</code></pre>
+<p>每次使用全新输出目录；该目录必须在包外，不能是包的父目录，不能含符号链接或 Windows 重解析点。目录由脚本创建，请勿提前创建最后一级目录。样例通常数秒至几十秒结束。</p>
+<p>它执行既有 flow01：新建 TEST_ONLY 身份和签名授权 → 运行有意失败的固定 TEST → 保留退出 7 的 FAILED 原回执 → 原授权过期 → 新任务以新授权读取失败经验 → 经新进程生成仅供建议的上下文。桥返回 2 是前半段预期，整个样例最终应退出 0。结果应包含 <code>original_command_status: FAILED</code>、<code>original_command_exit: 7</code>、<code>dispatch_allowed: false</code>、<code>human_acceptance: NOT_CLAIMED</code>。</p>
+<p><strong>新身份如何初始化和签名：</strong> 入口调用包内 <code>tests/test_failure_experience.py</code> 的既有 <code>make_real_case()</code> 与 <code>RealCase.signed_scope()</code>。它用 Ed25519 在内存生成全新私钥，写公开 pin 和当前机器解析出的配置路径，按既有规范化 JSON 规则签当前 TEST_ONLY 范围，再由原 Controller 校验。私钥不落盘、不复用旧身份；输出内的测试授权与证据也不要作为分发包再分享。CLI 本身不提供生产身份安装或签名命令。</p>
+<h2>3. 查看入口和协议</h2>
+<pre><code class="language-powershell">$packageRoot = (Get-Location).Path
+$env:PYTHONPATH = (Join-Path $packageRoot 'src') + [IO.Path]::PathSeparator + (Join-Path $packageRoot 'core/src')
+$env:PYTHONDONTWRITEBYTECODE = '1'
+&amp; $python -B -m m2_construction.cli --help
+&amp; $python -B ./tools/native_b_runtime.py --help
+</code></pre>
+<p>完整字段、请求样式和 Gate 规则见 <code>core/docs/USAGE.md</code>；失败经验约束见 <code>docs/FAILURE_EXPERIENCE.md</code>。这些协议文档中的尖括号值是模板，不是可直接执行的配置。框架在运行时要求规范绝对路径，这是安全绑定要求；便携表示路径从当前包根/显式参数/环境变量解析，不内置原机器路径。</p>
+<table>
+<thead>
+<tr>
+<th>配置/参数</th>
+<th>含义与要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--output</code></td>
+<td>样例全新外部输出根；自动生成工作区、状态、公开测试 pin 和配置。</td>
+</tr>
+<tr>
+<td><code>workspace_root</code></td>
+<td>本次允许治理的工作区，由当前路径解析；不是此源码包固定路径。</td>
+</tr>
+<tr>
+<td><code>state_root</code></td>
+<td>当前可信状态目录，必须位于工作区外；不能清空来绕过已消费操作。</td>
+</tr>
+<tr>
+<td><code>pin_path</code> / <code>expected_pin_sha256</code></td>
+<td>新 TEST_ONLY 公开 pin 及预先审核的精确哈希。</td>
+</tr>
+<tr>
+<td>reviewer / CEO pins</td>
+<td>真实独立角色的公开 pin；高级审计/发布协议需要，flow01 不模拟这些验收。</td>
+</tr>
+<tr>
+<td><code>--config-sha256</code> / <code>--binding-sha256</code></td>
+<td>调用前固定并审核的精确输入哈希，不可由请求自选/临时改写。</td>
+</tr>
+<tr>
+<td><code>M2_TRUSTED_INPUTS</code></td>
+<td>高级文档示例使用的当前受信公共输入目录；样例不需要设置。</td>
+</tr>
+<tr>
+<td><code>M2_REVIEWED_CONFIG_SHA256</code> 等</td>
+<td>高级示例使用的独立审核后配置哈希；不是密钥，不能用请求内容自证。</td>
+</tr>
+<tr>
+<td><code>PYTHONPATH</code></td>
+<td>仅当前进程的包内 <code>src</code> 与 <code>core/src</code>；示例入口自行解析包根。</td>
+</tr>
+</tbody>
+</table>
+<p><code>CORE_CAPTURE.json</code> 与 <code>DELIVERY_MEMBERS.json</code> 为当前派生字节清单，<strong>不是签名或授权</strong>。路径文档和测试适配造成哈希变化，已在样例固定常量中更新为本包哈希。原 runtime/Gate 没有放宽；后续编辑任一固定成员会被拒绝。不要为了运行随手重算哈希绕过检查，应形成新派生版并复核。<code>BASELINE.json</code> 与 <code>ACTIVE_ACCEPTANCE.json</code> 只是历史出处/边界索引，不会读取原机器控制文件或恢复旧授权。</p>
+<h2>4. 常见失败</h2>
+<table>
+<thead>
+<tr>
+<th>提示/位置</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>找不到 Python / <code>ModuleNotFoundError: cryptography</code></td>
+<td>使用上一节的 <code>$python</code> 并在同一虚拟环境安装依赖。</td>
+</tr>
+<tr>
+<td><code>CANONICAL_ABSOLUTE_PATH_REQUIRED</code></td>
+<td>输出必须由当前路径/参数解析为规范绝对路径。</td>
+</tr>
+<tr>
+<td><code>FRESH_EXTERNAL_OUTPUT_REQUIRED</code></td>
+<td>换一个不存在的包外输出目录；不要覆盖上次证据。</td>
+</tr>
+<tr>
+<td><code>LINK_OR_REPARSE_POINT</code></td>
+<td>选普通目录，避开链接/联接点。</td>
+</tr>
+<tr>
+<td><code>PINNED_INPUT_CHANGED</code> / <code>CORE_BYTES</code> / <code>EXACT_CORE_33</code></td>
+<td>包被修改、成员增减或产生缓存；从清洁 ZIP 重新解压，保留失败原件。</td>
+</tr>
+<tr>
+<td>Gate 拒绝、旧授权到期、UNKNOWN</td>
+<td>按原回执定位；不能改成 PASS 或重放原操作。需要新的受信当前授权。</td>
+</tr>
+<tr>
+<td>返回栈/断言失败</td>
+<td>留存本次输出目录及错误；不要删除失败记录后冒充通过。</td>
+</tr>
+</tbody>
+</table>
+<p>具体回执和上下文位置见 <code>flow01/flow-result.json</code> 的引用；测试过程记录在同输出的 <code>flow01/test-processes/</code>，状态/回执在其 <code>state/</code> 下。样例数据是本次合成数据，原历史日志/会话均不在交付包内。</p>
+<h2>5. 范围与已知限制</h2>
+<ul>
+<li>本次只验证离线 flow01、帮助入口、包字节和路径清洁度，并对动态绝对路径拒绝测试作最小回归；不等于全量/压力/模型/长期运行/生产验收。</li>
+<li>全部核心和失败经验测试源码保留供审阅。<code>test_file_proof_real_project_and_same_cache_load</code> 需要未随原 ZIP 交付的 R3 历史对照，<code>--baseline-red</code> 需要未随原 ZIP 交付的前版桥。对应路径改为包内逻辑 <code>reference-inputs</code>，文件未伪造，不能把当前版本当作旧对照。因此不宣称开箱可跑完整历史测试套件。</li>
+<li>实际宿主接入须由操作者建立当前身份、独立审查、任务范围、状态保护、租约和审计；包没有一个通用生产初始化向导，也不携带旧部署配置/私钥/授权。</li>
+<li>只保护明确接入 Controller/工具桥的操作。它不是全局 Codex 工具拦截器、OS 沙箱或任意进程的安全隔离；不把样例 PASS 当作真实业务授权。</li>
+<li>UNKNOWN 保留原操作 ID，不自动重放；记忆和失败经验仅给建议，不提升权限。C06、旧服务、公网和业务状态不属于本包运行范围。</li>
+</ul>
+<footer>交付整理日期：2026-10-04 · 本地评估交付 · TEST_ONLY</footer></main></body></html>

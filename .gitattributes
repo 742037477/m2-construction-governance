@@ -1,0 +1,3 @@
+# Preserve exact published bytes, including source diagrams and hash manifests.
+* -text
+*.png binary

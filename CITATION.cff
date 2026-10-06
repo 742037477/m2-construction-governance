@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "请引用使用的确切提交或发布版本；本项目当前为源码可见的研究实现。"
+title: "M2 Construction Governance: A Governable Agent OS Method"
+type: software
+authors:
+  - name: "yyf"
+abstract: "A Python research implementation of bounded execution governance, atomic evidence, persistent orchestration and failure-experience reuse."

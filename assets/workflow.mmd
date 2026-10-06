@@ -1,0 +1,42 @@
+---
+title: "M2 完整施工治理流程 · TEST_ONLY"
+---
+flowchart TB
+  A["01 候选 + OBS<br/>固定目标、约束、可信对照、候选与累计预算"]
+  B["02 当前有效 Scope<br/>外部签署；绑定任务修订、文件、命令、效果、时间及预算"]
+  C["03 逐效果 Gate → INTENT / receipt<br/>校验当前授权，先记意图和预算，再派发并保存结果"]
+  D["04 真实 TEST / BUILD + freeze<br/>实际被测对象与候选字节一致；绑定通过回执及源码/测试/构建"]
+  E["05 非作者 AUDIT + 局部只读裁决<br/>外部作者证明与独立 reviewer 签名绑定当前候选"]
+  F["06 签署 INTERNAL_PARENT_ONLY 单次回交<br/>仅局部 GO 且指令匹配才消费；不授予发布权限"]
+  G["07 父集成 → 测试 / 冻结 / 独审<br/>核对回交来源与集成后字节，形成父候选证据链"]
+  H["08 CEO 接受<br/>核验外部接受与角色证明，绑定父候选、review 和子回交"]
+  I["09 PRE 只读裁决<br/>PASS 不自动派发"]
+  L["单独签署 release lease<br/>绑定父候选、PRE 摘要、独审、CEO 接受与目标<br/>核对签名、有效期与绑定"]
+  J["10 单次 release<br/>消费租约，派发前复核，记录实际效果"]
+  K["11 POST<br/>只读复核目标字节与完成记录，通过后登记 POST"]
+  M["12 人工审阅<br/>交付实际覆盖与未决项；明确人工接受才登记本次人验 PASS"]
+  A --> B --> C
+  C -->|"满足当前证据条件"| D
+  D --> E
+  E -->|"局部 GO 且签署回交指令匹配"| F
+  F --> G --> H --> I
+  I -->|"新鲜 PASS 且与当前租约绑定一致"| J
+  L --> J
+  J -->|"受控效果完成"| K
+  K -->|"实际复核与交付"| M
+  X["任一阶段失败或未决：保留原件与原因<br/>UNKNOWN / INDETERMINATE 保留原 ID，先核账本、文件与回执<br/>不换 ID 自动重放；恢复后仍检查当前授权<br/>预算、修订、账本连续，新 run / 新会话不清空旧记录"]
+  C -->|"条件不满足"| X
+  D -->|"FAIL / UNKNOWN"| X
+  E -->|"NO_GO / INDETERMINATE"| X
+  I -->|"FAIL / INDETERMINATE"| X
+  J -->|"UNKNOWN / DENIED"| X
+  K -->|"复核未通过"| X
+  N["可治理 Agent OS 研究实现 · TEST_ONLY<br/>宿主组织流程并保护源码、pin、配置、状态的写权限<br/>不是 OS 沙箱或自动 Agent 主控<br/>TEST、独审、CEO、发布、POST 与人验分别报告；旧人验不覆盖新版本"]
+  classDef normal fill:#EAF2FB,stroke:#2563A5,color:#16283F;
+  classDef gate fill:#E9F4F2,stroke:#087F8C,color:#16283F;
+  classDef audit fill:#F0EDF8,stroke:#70509B,color:#16283F;
+  classDef blocked fill:#FFF0EF,stroke:#B84142,color:#16283F;
+  class A,B,M,N normal;
+  class C,D,I,J,K,L gate;
+  class E,F,G,H audit;
+  class X blocked;

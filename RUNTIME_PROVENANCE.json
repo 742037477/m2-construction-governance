@@ -1,0 +1,35 @@
+{
+  "schema": "M2_RESEARCH_RUNTIME_DERIVATION_1",
+  "version": "M2-RESEARCH-20261006-RC1",
+  "parent_zip": "M2-Construction-Portable-Start-20261006-R2.zip",
+  "parent_zip_sha256": "27e79450a8aa5af4c791a38f41846740569c165d62ce33c0a448999c032e8c56",
+  "runtime_members": 74,
+  "unchanged_members": 70,
+  "embedded_baseline_members_unchanged": 53,
+  "all_python_bytes_unchanged": true,
+  "changed_reference_and_index_files": [
+    {
+      "path": "methods/acceptance-rules-v2.json",
+      "prior_sha256": "43b69a01c7b30d0eb6bd3b7b1efffc06aa046496ddf7d8ae75ae8f97bcb5cc96",
+      "sha256": "018ed267799542238ce8ceee61199754ba0f650fc1a1f17bff2e6a7007b855bf"
+    },
+    {
+      "path": "methods/CONSTRUCTION_ACCEPTANCE_V2.md",
+      "prior_sha256": "20e8ba9b5668cbc5f88dcef33939f893a76374d8c6da33e783f4328d13cdcd7a",
+      "sha256": "df866df1ed26a0887fe661e491448ffb63596ea4d07fda978cb8f47f2f85501d"
+    },
+    {
+      "path": "methods/README.md",
+      "prior_sha256": "d568c52ee48ada848a060055021c1511b29962e3517bf6638a06b0c5dabafd32",
+      "sha256": "936d94cdd3929c4030b38b0c73ccc2de3db8bea162a72cc04d1a16f82c51a737"
+    },
+    {
+      "path": "WRAPPER_FILES.json",
+      "prior_sha256": "d071e9eef7fdc51650ec613cdd6c9dc2f2fdb743a0385ee935c02be602d1dff2",
+      "sha256": "88bc196ac8af39eb1060417f263adffb1918675fd84cb20bf73ecbc5467cd9f8"
+    }
+  ],
+  "governance_semantics_changed": false,
+  "original_test_records_preserved": true,
+  "new_full_chain_validation": "NOT_RUN"
+}

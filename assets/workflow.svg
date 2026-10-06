@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1790" viewBox="0 0 1600 1790" role="img">
+<title>M2 完整施工治理流程</title><desc>从候选观察、当前 Scope、逐效果 Gate，到实际测试冻结、非作者审查、单次回交、父集成、CEO 接受、PRE与租约、发布、POST和人工审阅；失败原件持续保留。</desc>
+<rect width="1600" height="1790" fill="#F4F7FB"/>
+<text x="55" y="38" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="44" font-weight="700" fill="#16283F">M2 完整施工治理流程</text>
+<text x="55" y="102" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="400" fill="#526479">可治理 Agent OS 研究实现 · TEST_ONLY · 宿主组织流程；每阶段结论分别报告</text>
+<rect x="55" y="162" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="184" width="54" height="54" rx="15" fill="#2563A5"/>
+<text x="83" y="194" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">01</text>
+<text x="149" y="177" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">候选 + OBS</text>
+<text x="149" y="220" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">固定目标、约束、可信对照与候选；记录观察、缺口及累计预算</text>
+<polyline points="582.5,263 582.5,281" fill="none" stroke="#2563A5" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,281.0 577.3,270.2 587.7,270.2" fill="#2563A5"/>
+<rect x="55" y="282" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="304" width="54" height="54" rx="15" fill="#2563A5"/>
+<text x="83" y="314" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">02</text>
+<text x="149" y="297" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">当前有效 Scope</text>
+<text x="149" y="340" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">外部签署范围；绑定任务 / 修订、允许效果、文件、命令、时限与预算</text>
+<polyline points="582.5,383 582.5,401" fill="none" stroke="#2563A5" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,401.0 577.3,390.2 587.7,390.2" fill="#2563A5"/>
+<rect x="55" y="402" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="424" width="54" height="54" rx="15" fill="#087F8C"/>
+<text x="83" y="434" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">03</text>
+<text x="149" y="417" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">逐效果 Gate → INTENT / receipt</text>
+<text x="149" y="460" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">校验当前授权；先记意图和预算占用，再派发；保存真实结果</text>
+<polyline points="582.5,503 582.5,521" fill="none" stroke="#087F8C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,521.0 577.3,510.2 587.7,510.2" fill="#087F8C"/>
+<rect x="55" y="522" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="544" width="54" height="54" rx="15" fill="#087F8C"/>
+<text x="83" y="554" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">04</text>
+<text x="149" y="537" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">真实 TEST / BUILD + freeze</text>
+<text x="149" y="580" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">核对实际被测对象；候选字节绑定通过回执、源码、测试及构建输出</text>
+<polyline points="582.5,623 582.5,641" fill="none" stroke="#087F8C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,641.0 577.3,630.2 587.7,630.2" fill="#087F8C"/>
+<rect x="55" y="642" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="664" width="54" height="54" rx="15" fill="#70509B"/>
+<text x="83" y="674" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">05</text>
+<text x="149" y="657" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">非作者 AUDIT + 局部只读裁决</text>
+<text x="149" y="700" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">外部作者证明与审查签名绑定候选；作者与审者必须独立</text>
+<polyline points="582.5,743 582.5,761" fill="none" stroke="#70509B" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,761.0 577.3,750.2 587.7,750.2" fill="#70509B"/>
+<rect x="55" y="762" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="784" width="54" height="54" rx="15" fill="#70509B"/>
+<text x="83" y="794" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">06</text>
+<text x="149" y="777" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">签署 INTERNAL_PARENT_ONLY 单次回交</text>
+<text x="149" y="820" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">仅局部 GO 且签署指令匹配才消费；内部回交不授予发布权限</text>
+<polyline points="582.5,863 582.5,881" fill="none" stroke="#70509B" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,881.0 577.3,870.2 587.7,870.2" fill="#70509B"/>
+<rect x="55" y="882" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="904" width="54" height="54" rx="15" fill="#70509B"/>
+<text x="83" y="914" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">07</text>
+<text x="149" y="897" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">父集成 → 测试 / 冻结 / 独审</text>
+<text x="149" y="940" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">核对回交来源与集成后字节；父候选形成自己的证据链</text>
+<polyline points="582.5,983 582.5,1001" fill="none" stroke="#70509B" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,1001.0 577.3,990.2 587.7,990.2" fill="#70509B"/>
+<rect x="55" y="1002" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="1024" width="54" height="54" rx="15" fill="#70509B"/>
+<text x="83" y="1034" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">08</text>
+<text x="149" y="1017" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">CEO 接受</text>
+<text x="149" y="1060" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">核验外部接受与角色证明；绑定父候选、review 和子回交记录</text>
+<polyline points="582.5,1103 582.5,1121" fill="none" stroke="#70509B" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,1121.0 577.3,1110.2 587.7,1110.2" fill="#70509B"/>
+<rect x="55" y="1122" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="1144" width="54" height="54" rx="15" fill="#087F8C"/>
+<text x="83" y="1154" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">09</text>
+<text x="149" y="1137" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">PRE 只读 PASS + 当前租约绑定</text>
+<text x="149" y="1180" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">新鲜裁决 PASS 且与签署租约绑定一致，才可进入发布效果</text>
+<polyline points="582.5,1223 582.5,1241" fill="none" stroke="#087F8C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,1241.0 577.3,1230.2 587.7,1230.2" fill="#087F8C"/>
+<rect x="55" y="1242" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="1264" width="54" height="54" rx="15" fill="#087F8C"/>
+<text x="83" y="1274" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">10</text>
+<text x="149" y="1257" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">单次 release</text>
+<text x="149" y="1300" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">消费 release lease；派发前复核证据、目标和文件；记录实际效果</text>
+<polyline points="582.5,1343 582.5,1361" fill="none" stroke="#087F8C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,1361.0 577.3,1350.2 587.7,1350.2" fill="#087F8C"/>
+<rect x="55" y="1362" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="1384" width="54" height="54" rx="15" fill="#087F8C"/>
+<text x="83" y="1394" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">11</text>
+<text x="149" y="1377" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">POST</text>
+<text x="149" y="1420" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">只读复核目标字节与完成记录；复核通过后登记 POST 事件</text>
+<polyline points="582.5,1463 582.5,1481" fill="none" stroke="#087F8C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="582.5,1481.0 577.3,1470.2 587.7,1470.2" fill="#087F8C"/>
+<rect x="55" y="1482" width="1055" height="100" rx="18" fill="#FFFFFF" stroke="#D3DEEB" stroke-width="1.5"/>
+<rect x="72" y="1504" width="54" height="54" rx="15" fill="#2563A5"/>
+<text x="83" y="1514" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">12</text>
+<text x="149" y="1497" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#16283F">人工审阅</text>
+<text x="149" y="1540" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">交付版本、实际覆盖与未决项；仅明确人工接受才登记本次人验 PASS</text>
+<polyline points="1110,452 1142,452 1142,434 1170,434" fill="none" stroke="#B84142" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="7 7"/>
+<polygon points="1170.0,434.0 1159.2,439.2 1159.2,428.8" fill="#B84142"/>
+<polyline points="1110,692 1142,692 1142,434" fill="none" stroke="#B84142" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="7 7"/>
+<polyline points="1110,1172 1142,1172 1142,692" fill="none" stroke="#B84142" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="7 7"/>
+<rect x="1170" y="162" width="375" height="570" rx="20" fill="#FFF0EF" stroke="#E8C6C4" stroke-width="1.5"/>
+<text x="1191" y="184" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="27" font-weight="700" fill="#B84142">失败 / 未决分支</text>
+<text x="1191" y="235" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">适用于任何阶段的条件不满足</text>
+<text x="1191" y="270" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F"></text>
+<text x="1191" y="305" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">FAIL / NO_GO / DENIED</text>
+<text x="1191" y="340" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">保留失败原件与拒绝原因</text>
+<text x="1191" y="375" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F"></text>
+<text x="1191" y="410" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">UNKNOWN / INDETERMINATE</text>
+<text x="1191" y="445" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">保留原操作 ID 和未决状态</text>
+<text x="1191" y="480" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">先核账本、实际文件与原回执</text>
+<text x="1191" y="515" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">不换 ID 自动重放</text>
+<text x="1191" y="550" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F"></text>
+<text x="1191" y="585" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">恢复后仍须检查当前授权</text>
+<text x="1191" y="620" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">累计预算、任务修订与账本连续</text>
+<text x="1191" y="655" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="20" font-weight="400" fill="#16283F">新 run / 新会话不清空旧记录</text>
+<rect x="1170" y="770" width="375" height="211" rx="20" fill="#F0EDF8" stroke="#D8CAE8" stroke-width="1.5"/>
+<text x="1191" y="791" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#70509B">外部签署与真实独立性</text>
+<text x="1191" y="838" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">作者、review、CEO 等材料</text>
+<text x="1191" y="870" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">由当前可信角色提供并核验</text>
+<text x="1191" y="902" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">CONFIG_3 配置齐备</text>
+<text x="1191" y="934" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">不等于真实独审已经完成</text>
+<rect x="1170" y="1020" width="375" height="248" rx="20" fill="#E8F4F2" stroke="#BFDFD8" stroke-width="1.5"/>
+<text x="1191" y="1041" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#087F8C">单独签署 release lease</text>
+<text x="1191" y="1087" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">绑定当前父候选与 PRE 摘要</text>
+<text x="1191" y="1119" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">以及独审、CEO 接受和目标</text>
+<text x="1191" y="1151" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">签名、有效期与绑定均需复核</text>
+<text x="1191" y="1183" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479"></text>
+<text x="1191" y="1215" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">PRE 的 PASS 本身不派发发布</text>
+<polyline points="1170,1214 1158,1214 1158,1172 1110,1172" fill="none" stroke="#087F8C" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1110.0,1172.0 1120.8,1166.8 1120.8,1177.2" fill="#087F8C"/>
+<rect x="1170" y="1304" width="375" height="278" rx="20" fill="#EAF2FB" stroke="#C8D8EB" stroke-width="1.5"/>
+<text x="1191" y="1326" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="25" font-weight="700" fill="#2563A5">不能跨阶段升级结论</text>
+<text x="1191" y="1376" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">TEST 通过 ≠ 独审通过</text>
+<text x="1191" y="1407" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">子任务通过 ≠ 父项目通过</text>
+<text x="1191" y="1438" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">CEO 接受 ≠ 发布完成</text>
+<text x="1191" y="1469" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">POST 通过 ≠ 人工验收</text>
+<text x="1191" y="1500" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479"></text>
+<text x="1191" y="1531" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="21" font-weight="400" fill="#526479">旧版本人验不覆盖新版本</text>
+<rect x="55" y="1631" width="1490" height="112" rx="20" fill="#FFFFFF" stroke="#D7E0EB" stroke-width="1.5"/>
+<text x="80" y="1653" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" font-weight="700" fill="#2563A5">成立前提</text>
+<text x="240" y="1653" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="23" font-weight="400" fill="#16283F">宿主保护源码、pin、配置和状态的写权限，并将受治理操作路由到登记入口。</text>
+<text x="80" y="1696" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, PingFang SC, sans-serif" font-size="22" font-weight="400" fill="#526479">仅为机制说明；不是 OS 沙箱或自动 Agent 主控，不替代当前授权、真实证据与用户验收。</text>
+</svg>

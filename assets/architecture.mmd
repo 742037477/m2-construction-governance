@@ -1,0 +1,48 @@
+---
+title: "M2 架构：可治理 Agent OS 研究实现"
+---
+flowchart TB
+  subgraph EXT["外部操作者 / 可信签发方"]
+    E1["目标、范围与人工接受条件"]
+    E2["当前签署 Scope<br/>事先固定配置与公钥 pin"]
+    E3["独立角色与签署材料<br/>作者 / reviewer / CEO / release lease"]
+  end
+  subgraph HOST["宿主 + AI 编排"]
+    H["理解项目、拆任务、组织角色与模型<br/>维护修订、原 ID、账本与累计预算"]
+    P["提出文件或命令请求<br/>提议不等于授权"]
+    H --> P
+  end
+  subgraph KERNEL["Python 确定性治理内核 · TEST_ONLY"]
+    G["每次效果 Gate<br/>当前签名范围、撤销、时间、任务修订<br/>文件与前置字节、命令、资源与预算"]
+    V["候选与交付证据核验<br/>TEST/BUILD、freeze、作者证明与独审<br/>局部回交、CEO、PRE、release lease、POST"]
+    I["先保存 INTENT 与预算占用"]
+    G -->|"条件满足"| I
+  end
+  subgraph ADAPTER["登记适配器 · 受控效果"]
+    X["create / patch<br/>固定 TEST / BUILD<br/>单次 INTERNAL_PARENT_ONLY / release"]
+  end
+  subgraph EVIDENCE["证据持久与参考记忆"]
+    L["原子证据与持久状态<br/>ledger、操作回执、候选及角色证明<br/>任务图、租约、attempt、检查点与未决项"]
+    M["显式项目资料与来源哈希<br/>可重建投影、恢复检查点、失败经验 advisory<br/>参考不授予执行权限"]
+    L -. "回到原件并重建投影" .-> M
+  end
+  E1 --> H
+  E2 --> G
+  E3 --> V
+  P --> G
+  I --> X
+  X -->|"实际结果或 UNKNOWN"| L
+  V -->|"验证后的记录"| L
+  L -. "核对当前原件" .-> G
+  M -. "帮助理解与恢复，不授予权限" .-> H
+  G -->|"条件不满足"| B["保留原始失败与原因<br/>UNKNOWN 保留原 ID、先核实、不自动重放"]
+  L -. "失败 / 未决" .-> B
+  N["宿主写权限前提：保护源码、pin、配置与状态库<br/>受治理操作必须经过登记入口；本地哈希链不是外部不可改写日志<br/>project.json 不自动写入 MemoryStore，也不自动接好编排<br/>不是 OS 沙箱，不接管全部原生工具；签名不保证审查意见正确<br/>C06 仅为治理语义参考，两版模块与三道门实现不能视为完全相同"]
+  classDef external fill:#F0EDF8,stroke:#70509B,color:#16283F;
+  classDef host fill:#EAF2FB,stroke:#2563A5,color:#16283F;
+  classDef gate fill:#E9F4F2,stroke:#087F8C,color:#16283F;
+  classDef blocked fill:#FFF0EF,stroke:#B84142,color:#16283F;
+  class E1,E2,E3,M,L external;
+  class H,P,N host;
+  class G,V,I,X gate;
+  class B blocked;

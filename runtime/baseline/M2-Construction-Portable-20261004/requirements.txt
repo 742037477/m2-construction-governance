@@ -1,0 +1,2 @@
+# Runtime dependency, consistent with core/pyproject.toml
+cryptography>=41

@@ -1,0 +1,20 @@
+{
+  "schema": "CK_PORTABLE_ACCEPTANCE_BOUNDARY_1",
+  "refs": [
+    {
+      "path": "source-artifact:control/ACCEPTANCE_PRIORITY_20260928.json",
+      "sha256": "c89b2f3eeb0ef76ef5cbef16d675cb679fffdb815b86a47bf58942c26f4a1335",
+      "bytes": 3235
+    },
+    {
+      "path": "source-artifact:control/acceptance-rules-v2.json",
+      "sha256": "43b69a01c7b30d0eb6bd3b7b1efffc06aa046496ddf7d8ae75ae8f97bcb5cc96",
+      "bytes": 22181
+    }
+  ],
+  "performance_work": "CANCELLED_PROSPECTIVELY_NOT_PASS",
+  "human": "PORTABLE_DERIVATIVE_NOT_HUMAN_ACCEPTED",
+  "C06": "NOT_AUTHORIZED_BY_THIS_PACKAGE",
+  "record_kind": "HISTORICAL_REFERENCE_INDEX_NOT_ACTIVE_AUTHORIZATION",
+  "upstream_human_acceptance": "PASS_CK-FINAL-20260928-01_20260928"
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "CK_PORTABLE_VALIDATION_1",
+  "date": "2026-10-04",
+  "status": "PASS_SCOPED_OFFLINE_PORTABILITY_CHECKS",
+  "python": "3.13.11",
+  "cryptography": "46.0.3",
+  "pytest": "9.1.1",
+  "results": [
+    {
+      "label": "source-flow01",
+      "exit_code": 0,
+      "package_unchanged": true,
+      "stdout_sha256": "6408735e5466078198640733c5c12966ca7426c69f2b675da18612eecdf8bb36",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "portable-cli-help",
+      "exit_code": 0,
+      "package_unchanged": true,
+      "stdout_sha256": "ed4db61428dd333d564c1f854d9530e117e1a3f9c76ab8f386c4d34ac72ecdce",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "portable-bridge-help",
+      "exit_code": 0,
+      "package_unchanged": true,
+      "stdout_sha256": "3c31bbb38d9926c48a86c7287eb84118f4a52c3eaabbc0e5848268f756de8658",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "portable-flow01",
+      "exit_code": 0,
+      "package_unchanged": true,
+      "stdout_sha256": "2bb6922f3a17dd2ae234e33b29550cc4dea15cd1fd268016cf259a4bf0b54c6e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "portable-path-denial",
+      "exit_code": 0,
+      "package_unchanged": true,
+      "stdout_sha256": "8ec40b79e91c7782b8cce87cc16ebfbd17ecb8e286b670839c54d325b226746b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "flow_comparison": {
+    "source": {
+      "status": "AUTHOR_TEST_PASS",
+      "original_bridge_status": "CLI_RETURNED",
+      "original_command_status": "FAILED",
+      "original_command_exit": 7,
+      "dispatch_allowed": false,
+      "expired_historical_authority": true,
+      "independent_acceptance": "NOT_CLAIMED",
+      "human_acceptance": "NOT_CLAIMED"
+    },
+    "portable": {
+      "status": "AUTHOR_TEST_PASS",
+      "original_bridge_status": "CLI_RETURNED",
+      "original_command_status": "FAILED",
+      "original_command_exit": 7,
+      "dispatch_allowed": false,
+      "expired_historical_authority": true,
+      "independent_acceptance": "NOT_CLAIMED",
+      "human_acceptance": "NOT_CLAIMED"
+    }
+  },
+  "source_and_candidate_same_interpreter_dependency_environment": true,
+  "isolated_directory_contains_spaces": true,
+  "environment": "system-minimum allowlist plus package-only PYTHONPATH; no credentials/config inherited",
+  "inputs": "fresh synthetic TEST_ONLY fixture for each run; time, paths, operation timestamps and random public identities differ by design",
+  "runtime_source_files_unchanged_from_source_zip": 19,
+  "read_scope": "package files plus Python runtime/dependencies and fresh synthetic output; no original repository runtime/config read",
+  "human_acceptance": "NOT_CLAIMED",
+  "production_acceptance": "NOT_CLAIMED",
+  "not_run": [
+    "full historical test suite",
+    "flow02",
+    "flow03",
+    "models",
+    "C06",
+    "services",
+    "load/stress",
+    "production identity deployment"
+  ]
+}

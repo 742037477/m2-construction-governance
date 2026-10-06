@@ -1,0 +1,89 @@
+{
+  "schema": "M2_PORTABLE_WRAPPER_FILES_1",
+  "version": "CK-PORTABLE-START-20261006-01",
+  "documentation_revision": "PUBLIC_METHODS_DERIVATIVE_RC1_FROM_R2",
+  "integrity_scope": "LOCAL_CONSISTENCY_NOT_SIGNATURE_OR_EXECUTION_AUTHORITY",
+  "files": {
+    "AGENTS.md": {
+      "bytes": 3578,
+      "sha256": "fc326056efa7629e8e4d2bb39d9e44c26f8d004cf9a9094c1c1579bef17e1853"
+    },
+    "BASELINE_FILES.json": {
+      "bytes": 9886,
+      "sha256": "e50cc71c4e43cbe9f36c08f789bdc3a31f5c88c994d88685bb00256898f74423"
+    },
+    "checks/test_entry.py": {
+      "bytes": 7514,
+      "sha256": "bc2634ad515c9268183bb3d4c486d52759f3cabba7076ba817d4f2574cbb76fb"
+    },
+    "checks/test_project_context.py": {
+      "bytes": 12030,
+      "sha256": "5a26b5fd3a7a626a511b30acd043048a9634003f7563c0745b21a7347d2c1faa"
+    },
+    "docs/ARCHITECTURE_CAUSALITY.md": {
+      "bytes": 13695,
+      "sha256": "42505839a7fb3fed57831eb83381cce07847013dedd00d367ab0eb5872c0f374"
+    },
+    "docs/PROJECT_CONTEXT.md": {
+      "bytes": 8270,
+      "sha256": "d892c393d931e14a292bcfb82c43d5ba549c29762f8c67f1e2254ec3e77e2462"
+    },
+    "docs/REVIEW_CHECKLIST.md": {
+      "bytes": 3408,
+      "sha256": "e13e4458efb8a24f292e4544c543f8d8d885a41b07d12c82cb5c12c07886e1c0"
+    },
+    "docs/STATUS_MEANING.md": {
+      "bytes": 3685,
+      "sha256": "68b29450b7edd20cfbc4a0e63d0a221b99d29e75c1ddf9c7ffe37b096b2caa83"
+    },
+    "docs/TROUBLESHOOTING.md": {
+      "bytes": 4166,
+      "sha256": "847d2f78a68ba0456e089fb1d4e8f470a6fe1a337338fab7713cf05565e7bd63"
+    },
+    "docs/WORKFLOW.md": {
+      "bytes": 6581,
+      "sha256": "938222cbe3501c234b2574fa2b2704e5575fc0c47818fe4d8a0f27c5eaedc04e"
+    },
+    "m2.py": {
+      "bytes": 12898,
+      "sha256": "a7e610284705bb81d5c90cec614b72cc825968882fbfa87da901bb55aab5cb64"
+    },
+    "methods/acceptance-rules-v2.json": {
+      "bytes": 19615,
+      "sha256": "018ed267799542238ce8ceee61199754ba0f650fc1a1f17bff2e6a7007b855bf"
+    },
+    "methods/CONSTRUCTION_ACCEPTANCE_V2.md": {
+      "bytes": 2354,
+      "sha256": "df866df1ed26a0887fe661e491448ffb63596ea4d07fda978cb8f47f2f85501d"
+    },
+    "methods/README.md": {
+      "bytes": 965,
+      "sha256": "936d94cdd3929c4030b38b0c73ccc2de3db8bea162a72cc04d1a16f82c51a737"
+    },
+    "portable/project_context.py": {
+      "bytes": 17706,
+      "sha256": "a0a69fcbb3c46d531e296d261f194302d68c9f03ac862b1ed565713252253b28"
+    },
+    "PORTABLE_VALIDATION.json": {
+      "bytes": 6383,
+      "sha256": "31fb19d828c6afdbcc45b766cec8cd4261ae730bc0014b3245c6f06e725150bf"
+    },
+    "README.md": {
+      "bytes": 3080,
+      "sha256": "2102966f97e6452c429b36c933162952ec25aaecac5eb68247920ab859c0098e"
+    },
+    "requirements.txt": {
+      "bytes": 18,
+      "sha256": "dcca8f01676ff8d797b9e25ee0853e0ba521990009df204d799fb82c2978bb9b"
+    },
+    "START_HERE.md": {
+      "bytes": 5939,
+      "sha256": "4dc03f7edb2827dd1faf3e6cad9cec2f38a6bc7fe0383e4d3030117f469b7a2b"
+    },
+    "VALIDATION.md": {
+      "bytes": 2308,
+      "sha256": "867123e887955c4d4772cf40f88e4cb14e5b66826150263bf56634d8fd83e280"
+    }
+  },
+  "public_release_version": "M2-RESEARCH-20261006-RC1"
+}
